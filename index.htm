@@ -1,47 +1,137 @@
-<DOCTYPE html>
-<style>
-    form{
-        background-color: #ffffff;
-        text-decoration: underline;
-        border-color: bisque;
-        border: 10px;
-        border-style: dashed;
-        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        text-align: left;
-        margin: 30px auto;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prabal ❤️ Shreya</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #fff0f5;
+      margin: 0;
+      padding: 0;
+      text-align: center;
     }
-    form input, form textarea{
-        width:100px;
-        padding:10px;
-        margin: top 10px;
-        margin: left 10px;
-        margin: right 10px;
-        margin: bottom 10px;
-        border: 1px solid black;
-        border: radius 5px;
+
+    header {
+      background-color: #ff6f91;
+      color: white;
+      padding: 30px 20px;
     }
-    form button{
-        color: aqua;
-        background-color:blueviolet;
-        padding: 10px 20px;
-        border: dotted;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0;
     }
-    form button:hover{
-        color:aqua
+
+    h2 {
+      font-weight: normal;
     }
-</style>
-<hr>
-<h2>share your idea<h2>
 
-    <form>
-        <label for = "name"> Your name:</label><br>
-        <input type="text" id="name" placeholder="Enter your name"><br><br>
+    .photos {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
 
-        <label for ="email"> Email address:</label><br>
-        <input type ="text" id="Email" placeholder="enter your email address"><br><br>
+    .person {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 250px;
+    }
 
-        <label for ="message"> Your message to the world</label> <br>
-        <input type="text" id="Email" placeholder="enter your message to the world"><br><br>
+    .person img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-        <button type="submit">Send message</button>
-    </form>
+    .person h3 {
+      margin-top: 15px;
+      color: #333;
+    }
+
+    .message {
+      font-size: 1.2rem;
+      margin: 30px auto;
+      max-width: 600px;
+      color: #444;
+    }
+
+    form {
+      background-color: #fff;
+      margin: 40px auto;
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background-color: #ff6f91;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #e05d7b;
+    }
+
+    footer {
+      margin-top: 50px;
+      color: #888;
+      font-size: 0.9rem;
+      padding-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Prabal ❤️ Shreya</h1>
+    <h2>A beautiful beginning worth sharing</h2>
+  </header>
+
+  <div class="photos">
+    <div class="person">
+      <img src="prabal.jpg" alt="Prabal">
+      <h3>Prabal</h3>
+    </div>
+    <div class="person">
+      <img src="shreya.jpg" alt="Shreya">
+      <h3>Shreya</h3>
+    </div>
+  </div>
+
+  <div class="message">
+    We're sharing something special with you — a love that's grown into something beautiful.  
+    Let us know what you think 💬
+  </div>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <textarea placeholder="Leave your opinion or message..." rows="4" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+
+  <footer>
+    Made with 💖 by Kari
+  </footer>
+
+</body>
+</html>
