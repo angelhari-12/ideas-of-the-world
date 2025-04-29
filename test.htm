@@ -3,28 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>Prabal ❤️ Shreya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background: #fff0f5;
+      font-family: 'Dancing Script', cursive;
+      background: linear-gradient(to bottom right, #ffe6eb, #fff0f5);
       margin: 0;
       padding: 0;
       text-align: center;
     }
+    @keyframes float {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-800px); opacity: 0; }
+}
 
+.heart {
+  position: fixed;
+  bottom: -100px;
+  font-size: 24px;
+  animation: float 6s linear infinite;
+  color: #ff6f91;
+  pointer-events: none;
+}
     header {
-      background-color: #ff6f91;
+      background-color: #ff85a2;
       color: white;
-      padding: 30px 20px;
+      padding: 40px 20px;
+      border-bottom: 5px solid #ffd1dc;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
     h2 {
       font-weight: normal;
+      color: #fff9f9;
     }
 
     .photos {
@@ -54,42 +69,20 @@
     }
 
     .message {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       margin: 30px auto;
       max-width: 600px;
       color: #444;
     }
 
-    form {
-      background-color: #fff;
-      margin: 40px auto;
-      max-width: 400px;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 12px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    form button {
-      background-color: #ff6f91;
-      color: white;
+    iframe {
+      margin-top: 40px;
       border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background-color: #e05d7b;
+      width: 90%;
+      max-width: 700px;
+      height: 800px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     footer {
@@ -103,8 +96,8 @@
 <body>
 
   <header>
-    <h1>Prabal ❤️ Shreya</h1>
-    <h2>A beautiful beginning worth sharing</h2>
+    <h1>💖 Prabal & Shreya Forever 💖</h1>
+    <h2>A love story worth sharing</h2>
   </header>
 
   <div class="photos">
@@ -119,19 +112,38 @@
   </div>
 
   <div class="message">
-    We're sharing something special with you — a love that's grown into something beautiful.  
-    Let us know what you think 💬
+    We're happy to share something beautiful with you.  
+    Tell us what you think about this love story 💌
   </div>
 
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <textarea placeholder="Leave your opinion or message..." rows="4" required></textarea>
-    <button type="submit">Send</button>
-  </form>
+  <h2>Leave your message for Prabal & Shreya 💬</h2>
 
+  <!-- Embedded Google Form -->
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLSdDuehD5taWxPVC77icNdDFzu2yQVdiw42tKc7Uj5EId1ChPA/viewform?embedded=true" 
+    allowfullscreen>
+    Loading…
+  </iframe>
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTx4bcPqbW8mKML5DLW8OoHsRKI1MYgzHkyq1UZ2R2n5Dax0yyVXPZwcoQvqHKxRVf8Mca--iUm02y8/pubhtml?widget=true&amp;headers=false"></iframe>
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.textContent = '💖';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+  
+    setInterval(createHeart, 500);
+  </script>
   <footer>
-    Made with 💖 by Kari
+    Made with ❤️ by Kari — Love deserves to be celebrated.
   </footer>
-
+  <audio autoplay loop>
+    <source src="wedding.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 </body>
 </html>
