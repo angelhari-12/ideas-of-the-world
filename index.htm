@@ -12,7 +12,19 @@
       padding: 0;
       text-align: center;
     }
+    @keyframes float {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-800px); opacity: 0; }
+}
 
+.heart {
+  position: fixed;
+  bottom: -100px;
+  font-size: 24px;
+  animation: float 6s linear infinite;
+  color: #ff6f91;
+  pointer-events: none;
+}
     header {
       background-color: #ff85a2;
       color: white;
@@ -90,11 +102,11 @@
 
   <div class="photos">
     <div class="person">
-      <img src="prabal.jpeg" alt="Prabal">
+      <img src="prabal.jpg" alt="Prabal">
       <h3>Prabal</h3>
     </div>
     <div class="person">
-      <img src="shreya.jpeg" alt="Shreya">
+      <img src="shreya.jpg" alt="Shreya">
       <h3>Shreya</h3>
     </div>
   </div>
@@ -112,10 +124,26 @@
     allowfullscreen>
     Loading…
   </iframe>
-
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTx4bcPqbW8mKML5DLW8OoHsRKI1MYgzHkyq1UZ2R2n5Dax0yyVXPZwcoQvqHKxRVf8Mca--iUm02y8/pubhtml?widget=true&amp;headers=false"></iframe>
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.textContent = '😻';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+  
+    setInterval(createHeart, 500);
+  </script>
   <footer>
     Made with ❤️ by Kari — Love deserves to be celebrated.
   </footer>
-
+  <audio autoplay loop>
+    <source src="wedding.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 </body>
 </html>
