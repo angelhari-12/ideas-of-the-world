@@ -94,7 +94,21 @@
   </style>
 </head>
 <body>
-
+    <audio id="bgmusic" autoplay loop>
+        <source src="wedding.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      
+      <script>
+        // Try autoplay immediately
+        const audio = document.getElementById('bgmusic');
+        audio.play().catch(() => {
+          // If autoplay fails, wait for user click
+          document.addEventListener('click', function () {
+            audio.play();
+          }, { once: true });
+        });
+      </script>
   <header>
     <h1>💖 Prabal & Shreya Forever 💖</h1>
     <h2>A love story worth sharing</h2>
@@ -102,11 +116,11 @@
 
   <div class="photos">
     <div class="person">
-      <img src="prabal.jpg" alt="Prabal">
+      <img src="prabal.jpeg" alt="Prabal">
       <h3>Prabal</h3>
     </div>
     <div class="person">
-      <img src="shreya.jpg" alt="Shreya">
+      <img src="shreya.jpeg" alt="Shreya">
       <h3>Shreya</h3>
     </div>
   </div>
@@ -129,7 +143,7 @@
     function createHeart() {
       const heart = document.createElement('div');
       heart.classList.add('heart');
-      heart.textContent = '😻';
+      heart.textContent = '💖';
       heart.style.left = Math.random() * 100 + 'vw';
       heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
       document.body.appendChild(heart);
@@ -141,9 +155,10 @@
   <footer>
     Made with ❤️ by Kari — Love deserves to be celebrated.
   </footer>
-  <audio autoplay loop>
+  <button onclick="document.getElementById('bgmusic').play()">▶️ Play Wedding Music</button>
+
+  <audio id="bgmusic" loop>
     <source src="wedding.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
   </audio>
 </body>
 </html>
